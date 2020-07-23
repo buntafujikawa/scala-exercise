@@ -1,3 +1,5 @@
-scalaVersion := "2.13.2"
+name := "scala-exercise"
 
-scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked", "-Xlint")
+version := "0.1"
+
+scalaVersion := "2.13.3"
