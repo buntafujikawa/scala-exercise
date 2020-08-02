@@ -71,10 +71,10 @@ object CollectionLibrary {
     case x::xs => xs.foldLeft(x.toString()){(x, y) => x + sep + y}
   }
 
-  def mkString[T](list: List[T])(sep: String): String = list match {
-    case Nil => ""
-    case x::xs => xs.foldLeft(x.toString){(x, y) => x + sep + y}
-  }
+//  def mkString[T](list: List[T])(sep: String): String = list match {
+//    case Nil => ""
+//    case x::xs => xs.foldLeft(x.toString){(x, y) => x + sep + y}
+//  }
 
   List(1,2,3,4,5).map(x => x * 2)
 
@@ -90,7 +90,7 @@ object CollectionLibrary {
     list.foldLeft(Nil:List[T]){(x,y) => if(f(y)) y::x else x}.reverse
   }
 
-  def find[T](list: List[T])(f: T => Boolean): Option[T] = list match {
+  def findSample[T](list: List[T])(f: T => Boolean): Option[T] = list match {
     case x::xs if f(x) => Some(x)
     case x::xs => find(xs)(f)
     case _ => None
